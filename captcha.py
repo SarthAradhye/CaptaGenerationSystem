@@ -15,7 +15,7 @@ from google.colab.patches import cv2_imshow
 input_image = cv2.imread('/content/car.jpeg')
 
 # Convert the image to grayscale
-gray_image = cv2.cvtColor(input_image, cv2.IMREAD_GRAYSCALE)
+gray_image = cv2.cvtColor(input_image, cv2.COLOR_BGR2GRAY)
 
 # Apply bilateral filter to smooth the image while preserving edges
 smooth_image = cv2.bilateralFilter(input_image, d=9, sigmaColor=75, sigmaSpace=75)
